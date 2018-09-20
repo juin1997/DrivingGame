@@ -481,7 +481,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Coin: 0
-  CoinDisplay: {fileID: 668747499}
+  CoinDisplay: {fileID: 668747501}
 --- !u!4 &413400584
 Transform:
   m_ObjectHideFlags: 0
@@ -758,7 +758,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u91D1\u5E01:0"
+  m_Text: 213156
 --- !u!222 &668747502
 CanvasRenderer:
   m_ObjectHideFlags: 0

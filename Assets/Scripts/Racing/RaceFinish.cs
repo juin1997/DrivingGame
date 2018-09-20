@@ -12,7 +12,7 @@ public class RaceFinish : MonoBehaviour {
     public GameObject LevelMusic;
     public GameObject CompleteTrig;
     public GameObject TimeManager;
-    public GameObject MiliDisplay;
+    public Text MiliDisplay;
     public AudioSource FinishMusic;
 
     private void OnTriggerEnter(Collider other)
@@ -35,7 +35,7 @@ public class RaceFinish : MonoBehaviour {
             LevelMusic.SetActive(false);
             ViewModes.SetActive(false);
             TimeManager.SetActive(false);
-            MiliDisplay.GetComponent<Text>().text = "0";
+            MiliDisplay.text = "0";
             FinishMusic.Play();
             GlobalCoin.CoinsValue += 100;
             PlayerPrefs.SetInt("Coin", GlobalCoin.CoinsValue);

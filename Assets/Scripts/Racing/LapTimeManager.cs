@@ -10,9 +10,9 @@ public class LapTimeManager : MonoBehaviour
     public static float MiliCount;
     public static string MiliDisplay;
 
-    public GameObject MinuteBox;
-    public GameObject SecondBox;
-    public GameObject MiliBox;
+    public Text MinuteBox;
+    public Text SecondBox;
+    public Text MiliBox;
 
     public static float RawTime;
 	
@@ -22,22 +22,22 @@ public class LapTimeManager : MonoBehaviour
         MiliCount += Time.deltaTime * 10;
         RawTime += Time.deltaTime;
         MiliDisplay = MiliCount.ToString("F0");
-        MiliBox.GetComponent<Text>().text = "" + MiliDisplay;
+        MiliBox.text = "" + MiliDisplay;
 
         if (MiliCount >= 10)
         {
             MiliCount = 0;
             SecondCount++;
         }
-        if(SecondCount <= 9) SecondBox.GetComponent<Text>().text = "0" + SecondCount + ".";
-        else SecondBox.GetComponent<Text>().text = SecondCount + ".";
+        if(SecondCount <= 9) SecondBox.text = "0" + SecondCount + ".";
+        else SecondBox.text = SecondCount + ".";
 
         if (SecondCount >= 60)
         {
             SecondCount = 0;
             MinuteCount++;
         }
-        if (MinuteCount <= 9) MinuteBox.GetComponent<Text>().text = "0" + MinuteCount + ":";
-        else MinuteBox.GetComponent<Text>().text = MinuteCount + ":";
+        if (MinuteCount <= 9) MinuteBox.text = "0" + MinuteCount + ":";
+        else MinuteBox.text = MinuteCount + ":";
     }
 }

@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class PositionUp : MonoBehaviour
 {
-    public GameObject PositionDisplay;
+    public Text PositionDisplay;
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "CarPos")
         {
-            PositionDisplay.GetComponent<Text>().text = "第一名";
+            PositionDisplay.text = "第一名";
         }
     }
 

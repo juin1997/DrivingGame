@@ -352,9 +352,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f1fff9ba4873b7438ef2f5fba2d2bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinuteBox: {fileID: 210663372}
-  SecondBox: {fileID: 1866513821}
-  MiliBox: {fileID: 576848503}
+  MinuteBox: {fileID: 210663374}
+  SecondBox: {fileID: 1866513823}
+  MiliBox: {fileID: 576848505}
 --- !u!4 &61441627
 Transform:
   m_ObjectHideFlags: 0
@@ -3726,12 +3726,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LapCompleteTrig: {fileID: 523820377}
   HalfLapTrig: {fileID: 1969800214}
-  MinuteDisplay: {fileID: 397347802}
-  SecondDisplay: {fileID: 728952524}
-  MiliDisplay: {fileID: 603123504}
-  LapTimeBox: {fileID: 0}
+  MinuteDisplay: {fileID: 397347804}
+  SecondDisplay: {fileID: 728952526}
+  MiliDisplay: {fileID: 603123506}
   RaceFinish: {fileID: 1734295457}
-  LapCounter: {fileID: 1166517562}
+  LapCounter: {fileID: 1166517564}
   LapsDone: 0
   RawTime: 0
 --- !u!1 &542815520
@@ -6053,7 +6052,7 @@ MonoBehaviour:
   RaceUI: {fileID: 101489379}
   ScoreUI: {fileID: 1152499227}
   AICar: {fileID: 337847150}
-  ScoreDisplay: {fileID: 16256378}
+  ScoreDisplay: {fileID: 16256380}
   ScoreObjects: {fileID: 155732000}
   PositionDisplay: {fileID: 1844436718}
   InternalScore: 0
@@ -12063,8 +12062,8 @@ MonoBehaviour:
   GoAudio: {fileID: 826713382}
   LevelMusic: {fileID: 1899503453}
   LapTimer: {fileID: 61441625}
-  CarControls: {fileID: 1265294525}
-  OpponentControls: {fileID: 337847150}
+  CarControls: {fileID: 1525100071}
+  OpponentControls: {fileID: 337847153}
 --- !u!4 &1265754436
 Transform:
   m_ObjectHideFlags: 0
@@ -12121,7 +12120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c138a9af20e7b74dba6398559850e28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PositionDisplay: {fileID: 1844436718}
+  PositionDisplay: {fileID: 1844436720}
 --- !u!65 &1281937576
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12480,7 +12479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80b51368bdcc8e245b2a790c71aa8caa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PositionDisplay: {fileID: 1844436718}
+  PositionDisplay: {fileID: 1844436720}
 --- !u!65 &1362993823
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13101,6 +13100,12 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400056, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 2}
   m_PrefabInternal: {fileID: 1525100069}
+--- !u!114 &1525100071 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11400002, guid: 0e7ee4df08df88c4880f43398f9ad2c2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1525100069}
+  m_Script: {fileID: 11500000, guid: 3ea65b38d485c374caa584a03f1de571, type: 3}
 --- !u!1 &1546449337
 GameObject:
   m_ObjectHideFlags: 0
@@ -13778,7 +13783,7 @@ MonoBehaviour:
   LevelMusic: {fileID: 1899503451}
   CompleteTrig: {fileID: 523820377}
   TimeManager: {fileID: 61441625}
-  MiliDisplay: {fileID: 576848503}
+  MiliDisplay: {fileID: 576848505}
   FinishMusic: {fileID: 94520735}
 --- !u!1 &1743581133
 GameObject:

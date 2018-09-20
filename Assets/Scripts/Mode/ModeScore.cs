@@ -8,7 +8,7 @@ public class ModeScore : MonoBehaviour {
     public GameObject RaceUI;
     public GameObject ScoreUI;
     public GameObject AICar;
-    public GameObject ScoreDisplay;
+    public Text ScoreDisplay;
     public GameObject ScoreObjects;
     public GameObject PositionDisplay;
     public static int CurrentScore;
@@ -31,7 +31,7 @@ public class ModeScore : MonoBehaviour {
     private void Update()
     {
         InternalScore = CurrentScore;
-        ScoreDisplay.GetComponent<Text>().text = "" + InternalScore;
+        ScoreDisplay.text = "" + InternalScore;
     }
 
 

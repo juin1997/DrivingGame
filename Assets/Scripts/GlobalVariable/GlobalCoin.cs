@@ -7,7 +7,7 @@ public class GlobalCoin : MonoBehaviour
 {
     public int Coin;
     public static int CoinsValue;
-    public GameObject CoinDisplay;
+    public Text CoinDisplay;
 	
 	void Start () {
         CoinsValue = PlayerPrefs.GetInt("Coin");
@@ -17,6 +17,6 @@ public class GlobalCoin : MonoBehaviour
 	void Update ()
     {
         Coin = CoinsValue;
-        CoinDisplay.GetComponent<Text>().text = "金币:" + Coin;
+        CoinDisplay.text = "金币:" + Coin;
 	}
 }
