@@ -9,7 +9,7 @@ public class PositionUp : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "CarPos")
+        if(other.CompareTag("CarPos"))
         {
             PositionDisplay.text = "第一名";
         }

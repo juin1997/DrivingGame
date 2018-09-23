@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PositionDown : MonoBehaviour {
-
+public class PositionDown : MonoBehaviour
+{
     public Text PositionDisplay;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "CarPos")
+        if (other.CompareTag("CarPos"))
         {
             PositionDisplay.text = "第二名";
         }

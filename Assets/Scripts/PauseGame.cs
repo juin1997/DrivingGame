@@ -6,7 +6,7 @@ public class PauseGame : MonoBehaviour
 {
     public GameObject pauseUI;
 
-	void Update ()
+    void Update ()
     {
         if (Input.GetButton("Pause"))
         {

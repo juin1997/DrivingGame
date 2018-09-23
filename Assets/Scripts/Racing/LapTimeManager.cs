@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,35 +8,58 @@ public class LapTimeManager : MonoBehaviour
     public static int SecondCount;
     public static float MiliCount;
     public static string MiliDisplay;
+    public static float RawTime;
 
     public Text MinuteBox;
     public Text SecondBox;
     public Text MiliBox;
+    public StringBuilder sb = new StringBuilder();
 
-    public static float RawTime;
 	
-	// Update is called once per frame
 	void Update ()
     {
+        sb.Remove(0, sb.Length);
         MiliCount += Time.deltaTime * 10;
         RawTime += Time.deltaTime;
         MiliDisplay = MiliCount.ToString("F0");
-        MiliBox.text = "" + MiliDisplay;
+        MiliBox.text = MiliDisplay.ToString();
 
         if (MiliCount >= 10)
         {
             MiliCount = 0;
             SecondCount++;
         }
-        if(SecondCount <= 9) SecondBox.text = "0" + SecondCount + ".";
-        else SecondBox.text = SecondCount + ".";
-
+        if (SecondCount <= 9)
+        {
+            sb.Append("0");
+            sb.Append(SecondCount);
+            sb.Append(".");
+            SecondBox.text = sb.ToString(); ;
+        }
+        else
+        {
+            sb.Append(SecondCount);
+            sb.Append(".");
+            SecondBox.text = sb.ToString();
+        }
+        sb.Remove(0, sb.Length);
         if (SecondCount >= 60)
         {
             SecondCount = 0;
             MinuteCount++;
         }
-        if (MinuteCount <= 9) MinuteBox.text = "0" + MinuteCount + ":";
-        else MinuteBox.text = MinuteCount + ":";
+        if (MinuteCount <= 9)
+        {
+            sb.Append("0");
+            sb.Append(MinuteCount);
+            sb.Append(":");
+            MinuteBox.text = sb.ToString();
+        }
+        else
+        {
+            sb.Append(MinuteCount);
+            sb.Append(":");
+            MinuteBox.text = sb.ToString();
+        }
     }
 }
