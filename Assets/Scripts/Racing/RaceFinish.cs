@@ -12,7 +12,10 @@ public class RaceFinish : MonoBehaviour {
     public GameObject LevelMusic;
     public GameObject CompleteTrig;
     public GameObject TimeManager;
+    public GameObject FinishOption;
     public Text MiliDisplay;
+    public Text Coin;
+    public Text Position;
     public AudioSource FinishMusic;
     public ModeScore modeScore;
 
@@ -57,8 +60,25 @@ public class RaceFinish : MonoBehaviour {
             TimeManager.SetActive(false);
             MiliDisplay.text = "0";
             FinishMusic.Play();
-            GlobalCoin.CoinsValue += 100;
+            if (Position.text == "第一名")
+            {
+                GlobalCoin.CoinsValue += 100;
+                Coin.text += "100";
+            }
+            else
+            {
+                GlobalCoin.CoinsValue += 50;
+                Coin.text += "50";
+            }
             PlayerPrefs.SetInt("Coin", GlobalCoin.CoinsValue);
+            ShowFinishOption();
         }
+    }
+
+    IEnumerator ShowFinishOption()
+    {
+        yield return new WaitForSeconds(3);
+        FinishCam.SetActive(false);
+        FinishOption.SetActive(true);
     }
 }

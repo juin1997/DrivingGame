@@ -11,7 +11,7 @@ public class CemeraChange : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetButton("ViewMode"))
+        if(Input.GetButtonDown("ViewMode"))
         {
             if (CamMode == 2) CamMode = 0;
             else CamMode+=1;

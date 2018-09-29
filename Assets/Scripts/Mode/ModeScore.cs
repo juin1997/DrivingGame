@@ -14,6 +14,7 @@ public class ModeScore : MonoBehaviour {
     public Text MinCountDown;
     public Text SecCountDown;
     public Text MiliCountDown;
+    public Text TOCoin;
     public int InternalScore;
     public int ModeSelected;
     public StringBuilder sb = new StringBuilder();
@@ -60,6 +61,8 @@ public class ModeScore : MonoBehaviour {
             if(minute < 0)
             {
                 Time.timeScale = 0;
+                InternalScore = InternalScore > 200 ? InternalScore - 200 : 0;
+                TOCoin.text += InternalScore.ToString();
                 TimeOut.SetActive(true);
                 this.enabled = false;
                 return;

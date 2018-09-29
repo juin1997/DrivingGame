@@ -8,7 +8,7 @@ public class PauseGame : MonoBehaviour
 
     void Update ()
     {
-        if (Input.GetButton("Pause"))
+        if (Input.GetButtonDown("Pause"))
         {
             if (Time.timeScale == 1)
             {
