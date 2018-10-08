@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System;
+using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -63,6 +64,7 @@ public class ModeScore : MonoBehaviour {
                 Time.timeScale = 0;
                 InternalScore = InternalScore > 200 ? InternalScore - 200 : 0;
                 TOCoin.text += InternalScore.ToString();
+                GlobalCoin.CoinsValue += Convert.ToInt32(InternalScore * 0.2f);
                 TimeOut.SetActive(true);
                 this.enabled = false;
                 return;

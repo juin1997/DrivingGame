@@ -1,5 +1,5 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityStandardAssets.Vehicles.Car;
@@ -8,6 +8,7 @@ public class RaceFinish : MonoBehaviour {
 
     public GameObject car;
     public GameObject FinishCam;
+    public GameObject CamCube;
     public GameObject ViewModes;
     public GameObject LevelMusic;
     public GameObject CompleteTrig;
@@ -42,7 +43,10 @@ public class RaceFinish : MonoBehaviour {
             TimeManager.SetActive(false);
             MiliDisplay.text = "0";
             FinishMusic.Play();
-            
+            Coin.text += (ModeScore.CurrentScore * 0.2f).ToString();
+            GlobalCoin.CoinsValue += Convert.ToInt32(ModeScore.CurrentScore * 0.2f);
+            PlayerPrefs.SetInt("Coin", GlobalCoin.CoinsValue);
+            StartCoroutine(ShowFinishOption());
         }
         else
         {
@@ -71,7 +75,7 @@ public class RaceFinish : MonoBehaviour {
                 Coin.text += "50";
             }
             PlayerPrefs.SetInt("Coin", GlobalCoin.CoinsValue);
-            ShowFinishOption();
+            StartCoroutine(ShowFinishOption());
         }
     }
 
@@ -79,6 +83,7 @@ public class RaceFinish : MonoBehaviour {
     {
         yield return new WaitForSeconds(3);
         FinishCam.SetActive(false);
+        CamCube.SetActive(true);
         FinishOption.SetActive(true);
     }
 }
