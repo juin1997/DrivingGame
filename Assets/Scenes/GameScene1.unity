@@ -1944,6 +1944,7 @@ GameObject:
   - component: {fileID: 282840814}
   - component: {fileID: 282840813}
   - component: {fileID: 282840811}
+  - component: {fileID: 282840812}
   m_Layer: 0
   m_Name: NormalCamera
   m_TagString: MainCamera
@@ -1958,6 +1959,19 @@ AudioListener:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 282840810}
   m_Enabled: 1
+--- !u!114 &282840812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 282840810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4ed6c85caac94c4d84ec0fe8c6a0eb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  motionBlurShader: {fileID: 4800000, guid: d509454c115ceef4381af64799a345bd, type: 3}
+  blurAmount: 0.5
 --- !u!20 &282840813
 Camera:
   m_ObjectHideFlags: 0
@@ -4409,6 +4423,7 @@ GameObject:
   - component: {fileID: 543035165}
   - component: {fileID: 543035167}
   - component: {fileID: 543035166}
+  - component: {fileID: 543035168}
   m_Layer: 0
   m_Name: 'FPCamera '
   m_TagString: MainCamera
@@ -4472,6 +4487,19 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &543035168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 543035164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4ed6c85caac94c4d84ec0fe8c6a0eb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  motionBlurShader: {fileID: 4800000, guid: d509454c115ceef4381af64799a345bd, type: 3}
+  blurAmount: 0.5
 --- !u!1 &576848503
 GameObject:
   m_ObjectHideFlags: 0
@@ -5686,6 +5714,7 @@ GameObject:
   - component: {fileID: 740509742}
   - component: {fileID: 740509744}
   - component: {fileID: 740509743}
+  - component: {fileID: 740509745}
   m_Layer: 0
   m_Name: 'FarCamera '
   m_TagString: MainCamera
@@ -5749,6 +5778,19 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &740509745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 740509741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4ed6c85caac94c4d84ec0fe8c6a0eb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  motionBlurShader: {fileID: 4800000, guid: d509454c115ceef4381af64799a345bd, type: 3}
+  blurAmount: 0.5
 --- !u!1 &745330437
 GameObject:
   m_ObjectHideFlags: 0
